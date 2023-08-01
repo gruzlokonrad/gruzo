@@ -1,5 +1,3 @@
-const { type } = require('os')
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
@@ -9,7 +7,7 @@ const nextConfig = {
     return [
       {
         source: '/blog/:path*',
-        destination: 'https://blog.gruzo.dev/:path*',
+        destination: 'https://blog.gruzo.dev/blog/:path*',
         basePath: false,
       },
     ]
