@@ -7,8 +7,7 @@ const nextConfig = {
     return [
       {
         source: '/blog/:path*',
-        destination: 'https://blog.gruzo.dev/blog/:path*',
-        basePath: false,
+        destination: 'https://blog.gruzo.dev/:path*',
       },
     ]
   },
