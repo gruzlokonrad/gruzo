@@ -9,7 +9,7 @@ export default function Home() {
         <Container className='relative h-full w-11/12 lg:w-2/3 max-w-xl'>
           <Image
             src="/logo.png"
-            alt="Logo gruzo.dev - IT for business"
+            alt="gruzo.dev - IT for business"
             fill
             className='object-contain'
             priority
