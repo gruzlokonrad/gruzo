@@ -1,6 +1,6 @@
 import connectDB from "@/app/lib/mongodb.js";
 import { NextResponse } from "next/server";
-import Contact from "@/app/models/contact"
+import NewsletterForm from "@/app/models/newsletterForm.js"
 import mongoose from "mongoose";
 
 
@@ -9,7 +9,7 @@ export async function POST(req) {
 
   try {
     await connectDB()
-    await Contact.create({ email })
+    await NewsletterForm.create({ email })
 
     return NextResponse.json({
       msg: ["Sukces! Więcej informacji otrzymasz na wskazany adres e-mail."],

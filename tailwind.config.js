@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,9 +9,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "white-adomi": '#fdfdfd',
-        "red-adomi": '#eb3f3f',
-        "dark-adomi": '#272c5d',
+        "brand-white": '#fdfdfd',
+        "brand-red": '#eb3f3f',
+        "brand-darkblue": '#272c5d',
       }
     },
     container: {

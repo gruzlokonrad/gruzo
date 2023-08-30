@@ -1,6 +1,6 @@
 'use client'
-import Button from '@/components/ui/button/button'
-import Input from '@/components/ui/input/input'
+import Button from '@/components/ui/Button'
+import Input from '@/components/ui/Input'
 import React, { useEffect, useState } from 'react'
 
 interface IEmailForm {
