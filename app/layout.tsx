@@ -3,6 +3,7 @@ import './globals.scss'
 import { Montserrat } from 'next/font/google'
 import Header from '@/components/views/navbar/Header'
 import MenuMobile from '@/components/views/navbar/MenuMobile'
+import { Footer } from '@/components/views/Footer'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -46,7 +47,7 @@ export default function RootLayout({
         <main className='flex-grow'>
           {children}
         </main>
-        <footer>Footer</footer>
+        <Footer />
         <MenuMobile />
       </body>
     </html>

@@ -1,12 +1,11 @@
 'use client'
 import React from 'react'
-import { useResize } from '@/app/hooks/useResize'
-import { menuItems, MobileButtonItems } from './Header'
-import { tailwindClassMerge } from '@/app/utils/tailwindClassMerge'
+import { useResize } from '@/hooks/useResize'
+import { MobileButtonItems } from './Header'
+import { menuItems } from '@/utils/utils'
 
 const MenuMobile = () => {
   const { isMobile } = useResize()
-
   if (!isMobile) return null
 
   return (

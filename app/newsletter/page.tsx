@@ -1,28 +1,14 @@
-'use client'
-import Image from 'next/image'
-import Container from '@/components/ui/Container'
 import TextBrand from '@/components/ui/TextBrand'
 import EmailForm from '@/components/features/emailForm/emailForm'
 import ImageBrand from '@/components/ui/ImageBrand'
+// import NewsletterLayout from './layout'
 
 export default function Newsletter() {
   return (
     <div className='h-full flex flex-col lg:flex-row'>
-      {/* <section className='h-72 lg:w-full lg:h-screen'>
-        <Container className='relative h-full w-11/12 lg:w-2/3 max-w-xl'>
-          <Image
-            src="/logo.png"
-            alt="gruzo.dev - IT for business"
-            fill
-            sizes='100'
-            className='object-contain'
-            priority
-          />
-        </Container>
-      </section> */}
       <ImageBrand />
       <section className='flex-grow lg:flex lg:justify-center lg:w-full bg-brand-red text-brand-white'>
-        <Container className='flex flex-col justify-center max-w-2xl'>
+        <div className='container flex flex-col justify-center max-w-2xl'>
           <p className='header-1'>
             Strony internetowe dla małych firm.
           </p>
@@ -47,8 +33,16 @@ export default function Newsletter() {
             labelForm="Chcesz wiedzieć więcej?"
             labelButton="Sprawdź"
           />
-        </Container>
+        </div>
       </section>
     </div>
   )
 }
+
+// Newsletter.getLayout = function getLayout(page: React.ReactElement) {
+//   return (
+//     <NewsletterLayout>
+//       {page}
+//     </NewsletterLayout>
+//   )
+// }

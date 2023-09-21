@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { tailwindClassMerge } from '@/app/utils/tailwindClassMerge'
+import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 
 interface IDividerBrand {
   size: number,

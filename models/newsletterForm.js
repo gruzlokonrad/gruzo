@@ -14,5 +14,5 @@ const newsletterFormSchema = new Schema({
   },
 })
 
-const NewsletterForm = mongoose.models.NewsletterForm || mongoose.model("NewsletterForm", newsletterFormSchema, "landingpage")
+const NewsletterForm = mongoose.models.NewsletterForm || mongoose.model("NewsletterForm", newsletterFormSchema, "newsletterForm")
 export default NewsletterForm

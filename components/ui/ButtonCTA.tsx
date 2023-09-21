@@ -1,5 +1,5 @@
 'use client'
-import { tailwindClassMerge } from '@/app/utils/tailwindClassMerge'
+import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 import Link from 'next/link'
 import React from 'react'
 
@@ -11,7 +11,7 @@ interface IButtonCTA {
 
 const ButtonCTA = ({ children, link, className }: IButtonCTA) => {
   return (
-    <div className={tailwindClassMerge(`bg-brand-red text-brand-white rounded-xl px-2 md:px-4 py-2 ${className}`)}>
+    <div className={tailwindClassMerge(`bg-brand-red text-brand-white rounded-xl ml-4 px-1 py-1 md:px-4 text-center ${className}`)}>
       <Link href={link}>
         {children}
       </Link>

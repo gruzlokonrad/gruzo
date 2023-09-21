@@ -12,7 +12,7 @@ const TwoColumnsGridWithImageLayout = ({ textContent, imageContent: { path, alt 
   return (
     <div className={`
         w-full h-full 
-        max-w-screen-sm lg:max-w-screen-2xl
+        max-w-screen-sm lg:max-w-screen-lg
         lg:flex lg:items-center 
         lg:pl-14 xl:pl-16 2xl:pl-20
         mx-auto

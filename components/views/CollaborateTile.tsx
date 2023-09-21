@@ -5,7 +5,7 @@ import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 import Button from '../ui/Button'
 import ButtonCTA from '../ui/ButtonCTA'
 
-interface IServicesTile {
+interface ICollaborateTile {
   header: string,
   desc: string,
   srcImage: string,
@@ -16,16 +16,15 @@ interface IServicesTile {
   link?: string,
 }
 
-const ServicesTile = ({ header, desc, srcImage, altImage, reverse = false, className, extendContent = false, link }: IServicesTile) => {
+const CollaborateTile = ({ header, desc, srcImage, altImage, reverse = false, className, extendContent = false, link }: ICollaborateTile) => {
 
   return (
     <article className={tailwindClassMerge(`
       shadow-2xl 
-      mx-[8%] my-10 lg:my-20 md:mx-auto
+      mx-[8%] my-10 lg:my-0 md:mx-auto
       p-4 lg:py-10 lg:px-14
       rounded-2xl
-      md:max-w-screen-md lg:max-w-screen-lg
-      lg:flex
+      md:max-w-screen-md lg:max-w-sm
       bg-brand-white
       border
       ${!extendContent && 'min-h-[400px]'}
@@ -33,10 +32,8 @@ const ServicesTile = ({ header, desc, srcImage, altImage, reverse = false, class
     `)}>
       {/* *** TEXT CONTENT ***  */}
       <div className={tailwindClassMerge(`
-        lg:w-[45%]
-        lg:text-right
         lg:my-auto
-        ${reverse && 'lg:text-left order-2'}
+      ${reverse && 'lg:text-left order-2'}
       `)}>
         <ShortDescription header={header} className=''>{desc}</ShortDescription>
         {link &&
@@ -58,9 +55,9 @@ const ServicesTile = ({ header, desc, srcImage, altImage, reverse = false, class
         relative
         shadow-md 
         rounded-2xl 
-        mt-6 mx-auto lg:my-auto
-        max-w-xs lg:w-[45%] 
-        h-40 lg:h-64
+        mt-6 mx-auto lg:mt-10
+        max-w-xs 
+        h-40 lg:h-44
       '>
         <Image src={srcImage} alt={altImage} className='object-contain' fill />
       </div>
@@ -68,4 +65,4 @@ const ServicesTile = ({ header, desc, srcImage, altImage, reverse = false, class
   )
 }
 
-export default ServicesTile
+export default CollaborateTile

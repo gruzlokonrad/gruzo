@@ -1,9 +1,11 @@
 'use client'
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import ServicesTile from '../views/ServicesTile'
-import { tailwindClassMerge } from '@/app/utils/tailwindClassMerge'
-import { useResize } from '@/app/hooks/useResize'
-import { useParamModuleContext } from '@/app/context/paramsModule'
+import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
+import { useResize } from '@/hooks/useResize'
+
+// *** USE CONTEXT VARIANT ***
+// import { useParamModuleContext } from '@/app/context/paramsModule'
 
 const ServicesModule = () => {
   const servicesTilesContent = [
@@ -15,6 +17,7 @@ const ServicesModule = () => {
       className: '',
       reverse: true,
       extendContent: false,
+      link: '/www'
     },
     {
       header: 'Projekty graficzne',
@@ -24,6 +27,7 @@ const ServicesModule = () => {
       className: '',
       reverse: false,
       // extendContent: true,
+      link: '/design'
     },
     {
       header: 'Optymalizacja SEO',
@@ -33,25 +37,36 @@ const ServicesModule = () => {
       className: '',
       reverse: true,
       extendContent: true,
+      link: '/seo'
     },
   ]
   const ref: React.MutableRefObject<null> = useRef(null)
   const { isDesktop } = useResize()
-  const { paramModule, setParamModule } = useParamModuleContext()
 
+  // *** USE CONTEXT VARIANT ***
+  // const { paramModule, setParamModule } = useParamModuleContext()
+  // useLayoutEffect(() => {
+  //   const heightElement = ref?.current?.clientHeight
+  //   setParamModule({
+  //     totalHeight: heightElement,
+  //     mainArea: heightElement * 0.66,
+  //     extendArea: heightElement * 0.44,
+  //     singlePadding: (heightElement * 0.44) / 2,
+  //   });
+  // }, [ref])
+
+  // *** USE STATE VARIANT ***
+  const [paramModule, setParamModule] = useState(0)
   useLayoutEffect(() => {
     const heightElement = ref?.current?.clientHeight
-    setParamModule({
-      totalHeight: heightElement,
-      mainArea: heightElement * 0.66,
-      extendArea: heightElement * 0.44,
-      singlePadding: (heightElement * 0.44) / 2,
-    });
-  }, [ref])
+    setParamModule(heightElement * 0.66)
+  }, [])
 
   return (
     <div ref={ref}
-      style={{ height: (isDesktop && paramModule) ? (paramModule.mainArea) : 'auto' }}
+      // *** USE CONTEXT VARIANT ***
+      // style={{ height: (isDesktop && paramModule) ? (paramModule.minArea) : 'auto' }}
+      style={{ height: (isDesktop && paramModule) ? (paramModule) : 'auto' }}
       className={tailwindClassMerge(`
         lg:flex lg:flex-col lg:justify-center
         `)}>
@@ -66,6 +81,7 @@ const ServicesModule = () => {
             className={serviceTile.className}
             reverse={serviceTile.reverse}
             extendContent={serviceTile.extendContent}
+            link={serviceTile.link}
           />
         )
       })}

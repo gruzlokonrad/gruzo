@@ -25,6 +25,13 @@
     font-semibold
     my-5
   }
+
+  .header-3 {
+    @apply
+    text-lg lg:text-xl xl:text-2xl 2xl:text-3xl
+    font-normal
+    my-2
+  }
   .description {
     @apply
     text-lg lg:text-lg xl:text-xl 2xl:text-2xl
@@ -33,16 +40,16 @@
     @apply
     px-4 py-3 
     mt-px mb-4
-    placeholder:text-left 
-    border border-brand-white 
-    w-full lg:w-3/4 
-    max-w-sm 
+    placeholder:text-left placeholder:text-gray-400 
+    border border-gray-200 
+    w-full
     text-left 
     transition-all 
     outline-none 
     lg:focus:scale-105 focus:mr-3 
-    placeholder:text-black/75 
+    
     rounded-3xl
+    shadow-lg
   }
 }
 

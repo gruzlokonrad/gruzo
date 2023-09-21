@@ -2,10 +2,8 @@ import React from 'react'
 import ContainerModule from '../features/containerModule/ContainerModule'
 import MainHeader from '../ui/MainHeader'
 import ShortDescription from '../ui/ShortDescription'
-import Image from 'next/image'
-import image from 'next/image'
 import DividerBrand from '../ui/DividerBrand'
-import { useResize } from '@/app/hooks/useResize'
+import { useResize } from '@/hooks/useResize'
 import TwoColumnsGridWithImageLayout from '../layouts/TwoColumnsGridWithImageLayout'
 
 const HeroModule = () => {
@@ -22,7 +20,7 @@ const HeroModule = () => {
             </ShortDescription>
           </>
         }
-        imageContent={{path: '/work_gruzo.png', alt: 'work flow gruzo dev'}}
+        imageContent={{ path: '/work_gruzo.png', alt: 'work flow gruzo dev' }}
       />
       <DividerBrand size={isMobile ? 40 : 50} className={`${isMobile && '-bottom-10 sm:-bottom-16'}`} />
     </ContainerModule>

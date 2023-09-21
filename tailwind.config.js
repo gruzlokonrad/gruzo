@@ -12,6 +12,9 @@ module.exports = {
         "brand-white": '#fdfdfd',
         "brand-red": '#eb3f3f',
         "brand-darkblue": '#272c5d',
+      },
+      boxShadow: {
+        'checkbox': 'inset 0px 0px 0px 1px #fff;',
       }
     },
     container: {

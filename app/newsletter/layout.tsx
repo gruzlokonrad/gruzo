@@ -14,8 +14,9 @@ export default function NewsletterLayout({
   children: React.ReactNode
 }) {
   return (
-    <main className='flex-grow'>
-      {children}
-    </main>
+    <>{children}</>
+    // <main className='flex-grow'>
+    //   {children}
+    // </main>
   )
 }

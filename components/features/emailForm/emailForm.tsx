@@ -15,7 +15,7 @@ const EmailForm = ({ labelButton, labelForm }: IEmailForm) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    const res = await fetch("api/contact", {
+    const res = await fetch("api/newsletterForm", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -48,7 +48,7 @@ const EmailForm = ({ labelButton, labelForm }: IEmailForm) => {
           setValue={setEmail}
           outlined
         />
-        <Button type="submit">{labelButton}</Button>
+        <Button type="submit" className=''>{labelButton}</Button>
       </form>
       {/* Message */}
       <div className="bg-slate-100 flex flex-col lg:mr-2">

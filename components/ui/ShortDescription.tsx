@@ -1,4 +1,4 @@
-import { tailwindClassMerge } from '@/app/utils/tailwindClassMerge'
+import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 import React from 'react'
 
 
@@ -8,7 +8,7 @@ interface IShortDescription {
   className?: string,
 }
 
-const ShortDescription = ({header, children, className}: IShortDescription) => {
+const ShortDescription = ({ header, children, className }: IShortDescription) => {
   return (
     <div className={tailwindClassMerge(className)}>
       <div className='header-2'>{header}</div>
