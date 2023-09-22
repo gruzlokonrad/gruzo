@@ -10,6 +10,10 @@ type Form = { name: string, email: string, textMessage: string, acceptedTerms: b
 interface IContactForm { className?: string }
 interface IResponseMessages { msg: [] | string[] }
 
+const InputLabel = ({ children, labelFor }: { children: React.ReactNode, labelFor?: string }) => (
+  <label className='font-normal description mx-2' htmlFor={labelFor}>{children}</label>
+)
+
 const ContactForm = ({ className }: IContactForm) => {
   const [form, setForm] = useState<Form>({
     name: '',
@@ -70,7 +74,7 @@ const ContactForm = ({ className }: IContactForm) => {
               {form.acceptedTerms && <FontAwesomeIcon icon={faCheck} className='text-brand-white text-center w-full text-lg' />}
             </button>
           </div>
-          <div>
+          <div className='description'>
             Wyrażasz zgodę na kontakt telefoniczny w celu obsługi niniejszego zgłoszenia. Wyrażasz zgodę na otrzymywanie informacji handlowych środkami komunikacji elektronicznej wysyłanymi przez gruzo.dev oraz na wykorzystanie komunikacji email w celach marketingowych (
             <Link href='/terms-and-conditions.txt' className='underline'>
               Polityka Prywatności
@@ -93,27 +97,27 @@ const ContactForm = ({ className }: IContactForm) => {
   }
 
   return (
-    <form onSubmit={e => handleSubmit(e, form)} className={tailwindClassMerge(`text-left max-w-sm lg:max-w-lg mx-auto flex flex-col ${className}`)}>
+    <form onSubmit={e => handleSubmit(e, form)} className={tailwindClassMerge(`text-left max-w-sm lg:max-w-2xl mx-auto flex flex-col ${className}`)}>
       {/**** INPUTS FORM ****/}
-      <label className='font-normal mx-2' htmlFor='name'>Imię i nazwisko</label>
+      <InputLabel labelFor='name'>Imię i nazwisko</InputLabel>
       <input
         type='text'
         placeholder='Wpisz imię i nazwisko'
         name='name'
         value={form.name}
         onChange={e => setForm({ ...form, name: e.target.value })}
-        className='contactFormInput'
+        className='description contactFormInput'
       />
-      <label className='font-normal mx-2' htmlFor='email'>E-mail</label>
+      <InputLabel labelFor='email'>E-mail</InputLabel>
       <input
         type='email'
         placeholder='Wpisz e-mail'
         name='email'
         value={form.email}
         onChange={e => setForm({ ...form, email: e.target.value })}
-        className='contactFormInput'
+        className='description contactFormInput'
       />
-      <label className='font-normal mx-2' htmlFor='message'>Wiadomość</label>
+      <InputLabel labelFor='message'>Wiadomość</InputLabel>
       <textarea
         rows={4}
         cols={40}
@@ -121,16 +125,18 @@ const ContactForm = ({ className }: IContactForm) => {
         name='message'
         value={form.textMessage}
         onChange={e => setForm({ ...form, textMessage: e.target.value })}
-        className='contactFormInput'
+        className='description contactFormInput'
       />
       <Terms /> {/**** TERMS AND CONDITIONS ****/}
       {!!msg.length && <ResponseMessages msg={msg} />} {/**** RESPONSE MESSAGES ****/}
-      <Button
-        type='submit'
-        className='text-brand-white bg-brand-red rounded-3xl mb-6 lg:w-full max-w-lg outline-none'
-      >
-        Wyślij
-      </Button>
+      <div className='w-full'>
+        <Button
+          type='submit'
+          className='text-brand-white bg-brand-red rounded-3xl mb-6 lg:my-8 lg:w-full outline-none description'
+        >
+          Wyślij
+        </Button>
+      </div>
     </form >
   )
 }
