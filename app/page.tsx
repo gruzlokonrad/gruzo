@@ -13,10 +13,8 @@ export default function Home() {
   const { isMobile } = useResize()
   return (
     <>
-      {/**** ABOVE THE FOLD MODULE ****/}
-      <HeroModule />
-      {/**** BELOW THE FOLD MODULE ****/}
-      <ServicesModule />
+      <HeroModule /> {/**** ABOVE THE FOLD MODULE ****/}
+      <ServicesModule className='lg:h-[1050px]' /> {/**** BELOW THE FOLD MODULE ****/}
       <CallToActionModule />
       <CooperationWithIndustry />
       <Benefits />
