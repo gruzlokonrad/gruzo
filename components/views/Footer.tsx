@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { tailwindClassMerge } from '@/utils/tailwindClassMerge';
 import { useResize } from '@/hooks/useResize';
+import { MenuDesktop } from './navbar/MenuDesktop';
 
 type ParagraphType = { children: React.ReactNode, className?: string }
 
@@ -33,7 +34,7 @@ export const Footer = () => {
           <Paragraph>Wszelkie prawa zastrzezone</Paragraph>
         </div>
       </div>
-      <div className='w-72 lg:w-auto'>
+      <div className='w-72 lg:w-auto lg:my-12'>
         <div className='flex gap-10 mb-6 lg:mb-12'>
           <FontAwesomeIcon icon={faFacebookSquare} size={'3x'} />
           <FontAwesomeIcon icon={faLinkedin} size={'3x'} />
@@ -43,17 +44,7 @@ export const Footer = () => {
           <Paragraph>Terms and Conditions</Paragraph>
         </div>
       </div>
-      {isDesktop && (
-        <div className=''>
-          <ul>
-            {menuItems.map((item, index) => {
-              return (
-                <li key={item.desktopName} className='text-lg my-1'>{item.desktopName}</li>
-              )
-            })}
-          </ul>
-        </div>
-      )}
+      {isDesktop && <MenuDesktop className='lg:flex-col items-start lg:my-12 gap-2 xl:gap-4'/>}
     </footer>
   );
 };
