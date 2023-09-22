@@ -1,13 +1,8 @@
-'use client'
-import React, { useLayoutEffect, useRef, useState } from 'react'
+import React from 'react'
 import ServicesTile from '../views/ServicesTile'
 import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
-import { useResize } from '@/hooks/useResize'
 
-// *** USE CONTEXT VARIANT ***
-// import { useParamModuleContext } from '@/app/context/paramsModule'
-
-const ServicesModule = () => {
+const ServicesModule = ({className}:{className?: string}) => {
   const servicesTilesContent = [
     {
       header: 'Strony internetowe',
@@ -40,35 +35,11 @@ const ServicesModule = () => {
       link: '/seo'
     },
   ]
-  const ref: React.MutableRefObject<null> = useRef(null)
-  const { isDesktop } = useResize()
-
-  // *** USE CONTEXT VARIANT ***
-  // const { paramModule, setParamModule } = useParamModuleContext()
-  // useLayoutEffect(() => {
-  //   const heightElement = ref?.current?.clientHeight
-  //   setParamModule({
-  //     totalHeight: heightElement,
-  //     mainArea: heightElement * 0.66,
-  //     extendArea: heightElement * 0.44,
-  //     singlePadding: (heightElement * 0.44) / 2,
-  //   });
-  // }, [ref])
-
-  // *** USE STATE VARIANT ***
-  const [paramModule, setParamModule] = useState(0)
-  useLayoutEffect(() => {
-    const heightElement = ref?.current?.clientHeight
-    setParamModule(heightElement * 0.66)
-  }, [])
 
   return (
-    <div ref={ref}
-      // *** USE CONTEXT VARIANT ***
-      // style={{ height: (isDesktop && paramModule) ? (paramModule.minArea) : 'auto' }}
-      style={{ height: (isDesktop && paramModule) ? (paramModule) : 'auto' }}
+    <div
       className={tailwindClassMerge(`
-        lg:flex lg:flex-col lg:justify-center
+        lg:flex lg:flex-col lg:justify-center h-auto lg:mx-10 ${className}
         `)}>
       {servicesTilesContent.map((serviceTile, index) => {
         return (

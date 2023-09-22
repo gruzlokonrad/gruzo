@@ -1,8 +1,6 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React from 'react'
 import Header from '../ui/Header'
 import Image from 'next/image'
-import { useParamModuleContext } from '@/context/paramsModule'
-import { useResize } from '@/hooks/useResize'
 
 type IRecommendation = {
   id: string,
@@ -75,11 +73,8 @@ const Recommendations = () => {
     },
   ]
 
-  const { isDesktop } = useResize()
-  const ref: React.MutableRefObject<null> = useRef(null)
-
   return (
-    <div className='container mb-14 lg:px-6 preview lg:h-72'>
+    <div className='container mb-14 lg:px-6 lg:h-72'>
       <Header>Opinie</Header>
       <div className='flex flex-col lg:flex-row items-stretch gap-10'>
         {clientsRecommendations.map((recommendation, index) =>
