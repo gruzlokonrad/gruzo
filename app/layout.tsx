@@ -1,9 +1,6 @@
 import Script from 'next/script'
 import './globals.scss'
 import { Montserrat } from 'next/font/google'
-import Header from '@/components/views/navbar/Header'
-import MenuMobile from '@/components/views/navbar/MenuMobile'
-import { Footer } from '@/components/views/Footer'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -43,12 +40,7 @@ export default function RootLayout({
         `}
         </Script>
         {/* <!-- End Google Tag Manager --> */}
-        <Header />
-        <main className='flex-grow'>
-          {children}
-        </main>
-        <Footer />
-        <MenuMobile />
+        {children}
       </body>
     </html>
   )

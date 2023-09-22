@@ -36,7 +36,7 @@ const Header = () => {
       <div className='container h-20 flex p-2 justify-between items-center'>
         <Brand />
         {isDesktop && <MenuDesktop />}
-        <ButtonCTA link='newsletter' className=''>Bezpłatna konsultacja</ButtonCTA>
+        <ButtonCTA link='newsletter'>Bezpłatna konsultacja</ButtonCTA>
       </div>
     </nav>
   )

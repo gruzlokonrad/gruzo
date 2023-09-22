@@ -14,9 +14,9 @@ const Benefits = () => {
   ]
 
   return (
-    <ContainerModule bgToRight light className='lg:pb-10'>
+    <ContainerModule bgToRight light className='lg:pb-10 lg:mb-20 lg:mt-28'>
       <div className='max-w-screen-sm lg:max-w-screen-md mx-auto'>
-        <Header>Dlaczego warto?</Header>
+        <Header className='lg:mx-8'>Dlaczego warto?</Header>
         <div className='lg:flex lg:items-center'>
           <figure className='relative w-full h-72 lg:w-1/2'>
             <Image src='/benefits.png' fill alt='benefits gruzo dev' className='object-contain' />

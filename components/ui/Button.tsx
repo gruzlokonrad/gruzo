@@ -19,7 +19,7 @@ const Button = ({ children, type, className, outlined = false }: IButton) => {
         font-semibold
         rounded-full
         bg-brand-white
-        w-full lg:w-1/5 max-w-sm min-w-fit
+        w-full lg:w-1/5 max-w-sm lg:max-w-none min-w-fit
         transition-all
         lg:hover:scale-110 hover:lg:mx-3
         ${outlined && 'bg-transparent text-brand-white border-brand-white border'}
