@@ -77,19 +77,9 @@ const Recommendations = () => {
 
   const { isDesktop } = useResize()
   const ref: React.MutableRefObject<null> = useRef(null)
-  const { paramModule, setParamModule } = useParamModuleContext()
-  useLayoutEffect(() => {
-    const heightElement = ref?.current?.clientHeight
-    setParamModule({
-      totalHeight: heightElement,
-      mainArea: heightElement * 0.5,
-      extendArea: heightElement * 0.5,
-      singlePadding: (heightElement * 0.5) / 2,
-    });
-  }, [ref])
 
   return (
-    <div className='container mb-14 lg:px-6' ref={ref} style={{ height: (isDesktop && paramModule) ? paramModule.mainArea : 'auto' }}>
+    <div className='container mb-14 lg:px-6 preview lg:h-72'>
       <Header>Opinie</Header>
       <div className='flex flex-col lg:flex-row items-stretch gap-10'>
         {clientsRecommendations.map((recommendation, index) =>
