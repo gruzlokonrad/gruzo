@@ -11,7 +11,7 @@ interface IButtonCTA {
 
 const ButtonCTA = ({ children, link, className }: IButtonCTA) => {
   return (
-    <div className={tailwindClassMerge(`bg-brand-red text-brand-white rounded-xl ml-4 px-1 py-1 md:px-4 text-center ${className}`)}>
+    <div className={tailwindClassMerge(`bg-brand-red flex items-center justify-center text-brand-white rounded-xl ml-4 py-2 px-4 text-center min-h-[50px] ${className}`)}>
       <Link href={link}>
         {children}
       </Link>
