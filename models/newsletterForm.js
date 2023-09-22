@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
-const contactSchema = new Schema({
+const newsletterFormSchema = new Schema({
   email: {
     type: String,
     required: [true, "E-mail jest wymagany."],
@@ -14,6 +14,5 @@ const contactSchema = new Schema({
   },
 })
 
-const Contact = mongoose.models.Contact || mongoose.model("Contact", contactSchema, "landingpage")
-
-export default Contact
+const NewsletterForm = mongoose.models.NewsletterForm || mongoose.model("NewsletterForm", newsletterFormSchema, "newsletterForm")
+export default NewsletterForm

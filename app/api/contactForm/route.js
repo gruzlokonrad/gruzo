@@ -1,18 +1,18 @@
-import connectDB from "@/app/lib/mongodb.js";
+import connectDB from "@/lib/mongodb.js";
 import { NextResponse } from "next/server";
-import Contact from "@/app/models/contact"
+import ContactForm from "@/models/contactForm.js"
 import mongoose from "mongoose";
 
 
 export async function POST(req) {
-  const { email } = await req.json()
+  const { name, email, message } = await req.json()
 
   try {
     await connectDB()
-    await Contact.create({ email })
+    await ContactForm.create({ name, email, message })
 
     return NextResponse.json({
-      msg: ["Sukces! Więcej informacji otrzymasz na wskazany adres e-mail."],
+      msg: ["Wiadomość wysłana. Odpowiemy najszybciej jak to możliwe."],
       success: true
     })
   } catch (error) {
