@@ -1,6 +1,6 @@
-import connectDB from "@/app/lib/mongodb.js";
+import connectDB from "@/lib/mongodb.js";
 import { NextResponse } from "next/server";
-import ContactForm from "@/app/models/contactForm.js"
+import ContactForm from "@/models/contactForm.js"
 import mongoose from "mongoose";
 
 
