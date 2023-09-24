@@ -1,7 +1,6 @@
 import TextBrand from '@/components/ui/TextBrand'
 import EmailForm from '@/components/features/emailForm/emailForm'
 import ImageBrand from '@/components/ui/ImageBrand'
-// import NewsletterLayout from './layout'
 
 export default function Newsletter() {
   return (
@@ -38,11 +37,3 @@ export default function Newsletter() {
     </div>
   )
 }
-
-// Newsletter.getLayout = function getLayout(page: React.ReactElement) {
-//   return (
-//     <NewsletterLayout>
-//       {page}
-//     </NewsletterLayout>
-//   )
-// }
