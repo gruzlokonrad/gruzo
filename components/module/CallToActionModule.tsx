@@ -6,7 +6,7 @@ import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 
 const CallToActionModule = () => {
   return (
-    <ContainerModule bgToRight itemsToBottom >
+    <ContainerModule bgToRight itemsToBottom light>
       <TwoColumnsGridWithImageLayout
         textContent={<>
           <div className={tailwindClassMerge(`header-2 text-2xl lg:text-4xl xl:text-5xl 2xl:text-5xl`)}>Bezpłatna konsultacja</div>
