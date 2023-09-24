@@ -23,14 +23,14 @@ const ContainerModule = ({
   const alignItems = itemsToBottom ? 'lg:pt-40' : 'lg:pb-72'
 
   const styleModuleConfig = bgToRight
-    ? 'rounded-l-[70px] lg:rounded-l-[254px] ml-auto  text-left border-r-0'
-    : 'rounded-r-[70px] lg:rounded-r-[254px] mr-auto  text-right border-l-0'
+    ? 'rounded-l-[70px] lg:rounded-l-[254px] ml-auto  text-left border-r-0 lg:pl-28'
+    : 'rounded-r-[70px] lg:rounded-r-[254px] mr-auto  text-right border-l-0 lg:pr-28'
 
   return (
     // *** CONTAINER MODULE *** 
     <div className={tailwindClassMerge(`
         w-11/12 
-        p-4 pt-10 sm:p-10
+        p-10 sm:p-10
         my-4 lg:my-10
         border 
         ${light ? 'bg-brand-white border-brand-red/50 border-2' : 'bg-brand-red/30 border-brand-red'}
