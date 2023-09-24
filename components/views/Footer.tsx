@@ -1,6 +1,5 @@
 'use client';
 import React from 'react'
-import { menuItems } from '@/utils/utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { tailwindClassMerge } from '@/utils/tailwindClassMerge';
@@ -10,7 +9,7 @@ import { MenuDesktop } from './navbar/MenuDesktop';
 type ParagraphType = { children: React.ReactNode, className?: string }
 
 export const Paragraph = ({ children, className }: ParagraphType) => (
-  <p className={tailwindClassMerge(`font-normal text-xl ${className}`)}>{children}</p>
+  <p className={tailwindClassMerge(`description font-normal ${className}`)}>{children}</p>
 )
 
 export const Footer = () => {
@@ -34,8 +33,8 @@ export const Footer = () => {
           <Paragraph>Wszelkie prawa zastrzezone</Paragraph>
         </div>
       </div>
-      <div className='w-72 lg:w-auto lg:my-12'>
-        <div className='flex gap-10 mb-6 lg:mb-12'>
+      <div className='w-72 lg:w-auto lg:mb-12 lg:mt-32'>
+        <div className='flex gap-10 mb-6'>
           <FontAwesomeIcon icon={faFacebookSquare} size={'3x'} />
           <FontAwesomeIcon icon={faLinkedin} size={'3x'} />
         </div>
@@ -44,7 +43,7 @@ export const Footer = () => {
           <Paragraph>Terms and Conditions</Paragraph>
         </div>
       </div>
-      {isDesktop && <MenuDesktop className='lg:flex-col items-start lg:my-12 gap-2 xl:gap-4'/>}
+      {isDesktop && <MenuDesktop className={tailwindClassMerge(`description lg:flex-col items-start lg:my-12 gap-2 xl:gap-4 lg:mt-28`)}/>}
     </footer>
   );
 };
