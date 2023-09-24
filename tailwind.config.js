@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+/** @typedef { import('tailwindcss/defaultConfig') } DefaultConfig */
 module.exports = {
   mode: 'jit',
   content: [
