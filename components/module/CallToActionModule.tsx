@@ -18,7 +18,7 @@ const CallToActionModule = () => {
         </>}
         imageContent={{ path: '/contact_gruzo_dev.png', alt: 'skontaktuj się z nami gruzo dev' }}
       />
-      <ContactForm />
+      <ContactForm light/>
     </ContainerModule>
   )
 }

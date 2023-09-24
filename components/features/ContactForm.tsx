@@ -7,14 +7,14 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 type Form = { name: string, email: string, textMessage: string, acceptedTerms: boolean }
-interface IContactForm { className?: string }
+interface IContactForm { className?: string, light?: boolean }
 interface IResponseMessages { msg: [] | string[] }
 
 const InputLabel = ({ children, labelFor }: { children: React.ReactNode, labelFor?: string }) => (
   <label className='font-normal description mx-2' htmlFor={labelFor}>{children}</label>
 )
 
-const ContactForm = ({ className }: IContactForm) => {
+const ContactForm = ({ className, light  }: IContactForm) => {
   const [form, setForm] = useState<Form>({
     name: '',
     email: '',
@@ -132,7 +132,12 @@ const ContactForm = ({ className }: IContactForm) => {
       <div className='w-full'>
         <Button
           type='submit'
-          className='text-brand-white bg-brand-red rounded-3xl mb-6 lg:my-8 lg:w-full outline-none description'
+          className={`
+            rounded-3xl mb-6 lg:my-8 lg:w-full outline-none description
+            ${light
+              ? 'border-2 border-brand-red text-brand-red hover:bg-brand-red hover:text-brand-white'
+              : 'bg-brand-red text-brand-white'}
+            `}
         >
           Wyślij
         </Button>
