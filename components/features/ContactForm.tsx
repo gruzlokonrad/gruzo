@@ -1,6 +1,6 @@
-import React, { use, useEffect, useState } from 'react'
+'use client'
+import React, { useState } from 'react'
 import Button from '@/components/ui/Button'
-// import Checkbox from '../ui/Checkbox'
 import Link from 'next/link'
 import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'

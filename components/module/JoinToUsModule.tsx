@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import ContainerModule from '../features/containerModule/ContainerModule'
 import ContactForm from '../features/ContactForm'
@@ -14,8 +15,8 @@ const JoinToUsModule = () => {
       {isDesktop && <CooperationWithUs />}
       <div className={tailwindClassMerge(`header-2 lg:pl-0 text-left container`)}>Skontaktuj się</div>
       <div className='flex flex-col lg:flex-row'>
-        <ContactForm className='lg:w-3/5' />
-        <div className='relative w-full h-64 sm:h-72 md:h-96 lg:w-2/5 lg:h-[450px] my-auto'>
+        <ContactForm className='lg:w-1/2' />
+        <div className='relative w-full h-64 sm:h-72 md:h-96 lg:w-1/2 lg:h-[400px] my-auto'>
           {/* <Image src={'/send_email_image.png'} alt={'skontaktuj się z nami gruzo dev'} fill className='object-cover' /> */}
           <Image src={'/contact_with_us.png'} alt={'skontaktuj się z nami gruzo dev'} fill className='object-contain' />
         </div>
