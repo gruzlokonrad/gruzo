@@ -20,7 +20,6 @@ const ContainerModule = ({
 }: IModuleContainer) => {
   const { isMobile, isDesktop } = useResize()
 
-  const alignItems = itemsToBottom ? 'lg:pt-40' : 'lg:pb-72'
 
   const styleModuleConfig = bgToRight
     ? 'rounded-l-[70px] lg:rounded-l-[254px] ml-auto  text-left border-r-0 lg:pl-28'
@@ -30,12 +29,12 @@ const ContainerModule = ({
     // *** CONTAINER MODULE *** 
     <div className={tailwindClassMerge(`
         w-11/12 
-        p-10 sm:p-10
+        p-10 sm:p-10 lg:p-32
         my-4 lg:my-10
         border 
         ${light ? 'bg-brand-white border-brand-red/50 border-2' : 'bg-brand-red/30 border-brand-red'}
         ${styleModuleConfig}
-        ${isDesktop && alignItems}
+        ${isDesktop && (itemsToBottom && 'lg:pt-40')}
         ${isMobile && 'relative mb-14'}
         ${className}
       `)}>

@@ -5,8 +5,9 @@ import ContactForm from '../features/ContactForm'
 import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 
 const CallToActionModule = () => {
+  const isLight = true;
   return (
-    <ContainerModule bgToRight itemsToBottom light>
+    <ContainerModule bgToRight itemsToBottom light={isLight}>
       <TwoColumnsGridWithImageLayout
         textContent={<>
           <div className={tailwindClassMerge(`header-2 text-2xl lg:text-4xl xl:text-5xl 2xl:text-5xl`)}>Bezpłatna konsultacja</div>
@@ -18,7 +19,7 @@ const CallToActionModule = () => {
         </>}
         imageContent={{ path: '/contact_gruzo_dev.png', alt: 'skontaktuj się z nami gruzo dev' }}
       />
-      <ContactForm light/>
+      <ContactForm light={isLight}/>
     </ContainerModule>
   )
 }
