@@ -10,7 +10,7 @@ const HeroModule = () => {
   const { isMobile } = useResize()
 
   return (
-    <ContainerModule bgToRight>
+    <ContainerModule className='lg:pb-72' bgToRight>
       <TwoColumnsGridWithImageLayout
         textContent={
           <>
