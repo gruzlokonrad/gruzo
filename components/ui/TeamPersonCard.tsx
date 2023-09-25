@@ -28,8 +28,7 @@ export const TeamPersonCard = ({ id, name, position, image }: TeamPersonCardType
             src={image}
             alt={name}
             fill
-            objectFit='contain'
-            className='rounded-full'
+            className='object-contain rounded-full'
           />
         </div>
       </div>
