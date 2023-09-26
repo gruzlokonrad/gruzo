@@ -10,7 +10,7 @@ const ImageBrand = () => {
           <Image
             src="/logo.png"
             alt="gruzo.dev - IT for business"
-            fill sizes="100%"
+            fill
             sizes='100'
             className='object-contain'
             priority
