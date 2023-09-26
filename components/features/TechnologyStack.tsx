@@ -59,7 +59,7 @@ export const TechnologyStack = () => {
   return (
     <section>
       <h2 className='container header-1 font-medium'>Nasze Technologie</h2>
-      <div className={`container lg:max-w-full lg:flex lg:flex-wrap lg:justify-start lg:bg-brand-red/30 preview`}>
+      <div className={`container lg:max-w-full lg:flex lg:flex-wrap lg:justify-start lg:bg-brand-red/30`}>
         {technologyData.map((row, index) => {
           const { isMobile, isDesktop } = useResize()
           if (index % 2 === 0) {
