@@ -19,10 +19,10 @@ const Benefits = () => {
         <Header className='lg:mx-8'>Dlaczego warto?</Header>
         <div className='lg:flex lg:items-center'>
           <figure className='relative w-full h-72 lg:w-1/2'>
-            <Image src='/benefits.png' fill alt='benefits gruzo dev' className='object-contain' />
+            <Image src='/benefits.png' fill sizes="100%" alt='benefits gruzo dev' className='object-contain' />
           </figure>
           <div className='lg:mx-auto mt-6 lg:mt-2'>
-          <h3 className='header-3'>Znajdź odpowiedź!</h3>
+            <h3 className='header-3'>Znajdź odpowiedź!</h3>
             {benefits.map(benefit => (
               <BenefitElement key={benefit}>{benefit}</BenefitElement>
             ))}

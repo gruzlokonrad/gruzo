@@ -20,7 +20,7 @@ const HowToWorkWithUs = () => {
           <Image
             src={'/work_with_gruzo_dev.jpeg'}
             alt={'how to work with gruzo dev'}
-            fill
+            fill sizes="100%"
             className='lg:order-1 object-contain lg:object-cover'
           />
         </div>

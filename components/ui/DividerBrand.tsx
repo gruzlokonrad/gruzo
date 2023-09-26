@@ -17,6 +17,7 @@ const DividerBrand = ({ size, className }: IDividerBrand) => {
           alt='gruzo dev brand'
           width={size}
           height={size}
+          style={{ width: size, height: size }}
         />
       ))}
     </div>

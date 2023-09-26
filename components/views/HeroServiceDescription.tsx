@@ -27,7 +27,8 @@ export const HeroServiceDescription = ({ content: { header, text } }: HeroServic
           <Image
             src='/people_with_notebooks.png'
             alt='people with notebooks'
-            fill
+            fill sizes="100%"
+            priority
             className='object-contain'
           />
         </div>

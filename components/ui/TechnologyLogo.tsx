@@ -27,6 +27,7 @@ export const TechnologyLogo = ({ srcImage, altImage, large, rectangle }: Technol
         src={srcImage}
         alt={altImage}
         fill
+        sizes="100%"
         className='object-contain p-2'
       />
     </div>

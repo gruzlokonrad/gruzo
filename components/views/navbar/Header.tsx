@@ -20,7 +20,7 @@ export const Brand = () => (
     <Image
       src="/logo.png"
       alt="gruzo.dev - IT for business"
-      fill
+      fill sizes="100%"
       sizes='100'
       className='object-contain'
       priority

@@ -17,8 +17,8 @@ const JoinToUsModule = () => {
       <div className='flex flex-col lg:flex-row'>
         <ContactForm className='lg:w-1/2' />
         <div className='relative w-full h-64 sm:h-72 md:h-96 lg:w-1/2 lg:h-[400px] my-auto'>
-          {/* <Image src={'/send_email_image.png'} alt={'skontaktuj się z nami gruzo dev'} fill className='object-cover' /> */}
-          <Image src={'/contact_with_us.png'} alt={'skontaktuj się z nami gruzo dev'} fill className='object-contain' />
+          {/* <Image src={'/send_email_image.png'} alt={'skontaktuj się z nami gruzo dev'} fill sizes="100%" className='object-cover' /> */}
+          <Image src={'/contact_with_us.png'} alt={'skontaktuj się z nami gruzo dev'} fill sizes="100%" className='object-contain' />
         </div>
       </div>
     </ContainerModule>
