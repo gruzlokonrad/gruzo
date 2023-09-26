@@ -2,7 +2,7 @@ import React from 'react'
 import JoinToUsModule from '@/components/module/JoinToUsModule'
 import { HeroServiceDescription } from '@/components/views/HeroServiceDescription'
 import ServicesModule from '@/components/module/ServicesModule'
-import { TechnologyStack } from '@/components/views/TechnologyStack'
+import { TechnologyStack } from '@/components/features/TechnologyStack'
 
 const page = () => {
   const serviceDescription = {
