@@ -33,6 +33,7 @@ const RecommendationElement = ({ recommendation: { id, description, author, rati
             width={25}
             height={25}
             className=''
+            style={{ width: 25, height: 25 }}
           />
         ))}
       </div>

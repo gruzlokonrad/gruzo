@@ -25,7 +25,7 @@ const TwoColumnsGridWithImageLayout = ({ textContent, imageContent: { path, alt 
       {/* *** IMAGE CONTENT *** */}
       <div className='relative h-[250px] lg:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full lg:w-2/5'>
         {/* {imageContent} */}
-        <Image src={path} alt={alt} fill priority className='object-contain' />
+        <Image src={path} alt={alt} fill sizes="100%" priority className='object-contain' />
       </div>
     </div>
   )

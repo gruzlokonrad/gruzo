@@ -21,23 +21,20 @@ export const TeamPersonCard = ({ id, name, position, image }: TeamPersonCardType
         rounded-lg 
         border p-1 
         mx-auto 
-         preview
         flex items-center justify-center
       '>
         <div className='w-[91%] h-[91%] flex items-center rounded-full relative border'>
           <Image
             src={image}
             alt={name}
-            fill
-            objectFit='contain'
-            className='rounded-full'
+            fill sizes="100%"
+            className='object-contain rounded-full'
           />
         </div>
       </div>
       <div className='
         px-1
         w-full sm:w-52 md:w-40 lg:w-52 xl:w-64 2xl:w-80
-        preview
         mx-auto
       '>
         <div className='description font-medium'>{name}</div>

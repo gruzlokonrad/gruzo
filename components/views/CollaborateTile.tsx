@@ -59,7 +59,7 @@ const CollaborateTile = ({ header, desc, srcImage, altImage, reverse = false, cl
         max-w-xs 
         h-40 lg:h-44
       '>
-        <Image src={srcImage} alt={altImage} className='object-contain' fill />
+        <Image src={srcImage} alt={altImage} className='object-contain' fill sizes="100%" />
       </div>
     </article>
   )

@@ -62,7 +62,7 @@ const ServicesTile = ({ header, desc, srcImage, altImage, reverse = false, class
         max-w-xs lg:w-[45%] 
         h-40 lg:h-64
       '>
-        <Image src={srcImage} alt={altImage} className='object-contain' fill />
+        <Image src={srcImage} alt={altImage} className='object-contain' fill sizes="100%" />
       </div>
     </article>
   )
