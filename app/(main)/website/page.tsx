@@ -3,6 +3,7 @@ import JoinToUsModule from '@/components/module/JoinToUsModule'
 import { HeroServiceDescription } from '@/components/views/HeroServiceDescription'
 import ServicesModule from '@/components/module/ServicesModule'
 import { TechnologyStack } from '@/components/features/TechnologyStack'
+import { OurProjects } from '@/components/views/OurProjects/OurProjects'
 
 const page = () => {
   const serviceDescription = {
@@ -46,6 +47,7 @@ const page = () => {
       <HeroServiceDescription content={serviceDescription} />
       <ServicesModule servicesTilesContent={servicesTilesContent} />
       <TechnologyStack />
+      <OurProjects />
       <JoinToUsModule />
     </>
   )
