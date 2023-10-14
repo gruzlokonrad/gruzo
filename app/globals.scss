@@ -51,11 +51,33 @@
     rounded-3xl
     shadow-lg
   }
+
+  .button {
+    @apply
+    my-2 lg:my-0 lg:mx-2
+    px-8 py-4
+    font-semibold
+    rounded-full
+    lg:w-1/5 max-w-sm lg:max-w-none min-w-fit
+    transition-all
+    lg:hover:scale-110 hover:lg:mx-3
+  }
 }
 
 @layer utilities {
   .text_content--maxWidth {
     @apply max-w-lg lg:max-w-none
+  }
+
+  .button--primary {
+    @apply
+    text-center 
+    bg-brand-red
+    text-brand-white
+  }
+
+  .button--outlined {
+    @apply bg-transparent text-brand-white border-brand-white border
   }
 }
 

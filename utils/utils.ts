@@ -26,10 +26,10 @@ export const menuItems: menuItem[] = [
     link: "seo",
     icon: faChartLine,
   },
-  {
-    desktopName: "Blog",
-    mobileName: "blog",
-    link: "blog",
-    icon: faNewspaper,
-  },
+  // {
+  //   desktopName: "Blog",
+  //   mobileName: "blog",
+  //   link: "blog",
+  //   icon: faNewspaper,
+  // },
 ]
