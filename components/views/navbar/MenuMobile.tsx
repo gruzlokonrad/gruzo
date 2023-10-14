@@ -26,7 +26,12 @@ export const MobileButtonItems = ({ children, icon, className, path }: MobileBut
   return (
     <button type="button"
       onClick={handleClick}
-      className={tailwindClassMerge(`border-r last:border-none border-r-brand-red inline-flex flex-col items-center justify-center px-5 hover:bg-brand-red group ${className}
+      className={tailwindClassMerge(`
+      border-r border-brand-red first:border-l
+      inline-flex flex-col items-center justify-center 
+      px-5 
+      hover:bg-brand-red group 
+      ${className}
       ${pathURL === path ? 'bg-brand-red/90' : 'text-brand-darkblue'}
       `)}
     >
@@ -55,7 +60,7 @@ const MenuMobile = () => {
       border-brand-red bg-white border-t 
       `}
     >
-      <div className='grid h-full max-w-lg grid-cols-5 mx-auto font-medium'>
+      <div className='flex h-full max-w-lg mx-auto font-medium justify-center'>
         {menuItems.map(({ mobileName, link, icon }, index) => (
           <MobileButtonItems key={index} path={link} icon={icon}>{mobileName}</MobileButtonItems>
         ))}
