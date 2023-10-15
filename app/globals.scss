@@ -15,15 +15,15 @@
 @layer components {
   .header-1 {
     @apply
-    text-2xl lg:text-3xl xl:text-5xl 2xl:text-5xl
+    text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl
     mb-6 lg:mb-6 xl:mb-10
     font-bold
   }
   .header-2 {
     @apply
-    text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl
+    text-xl lg:text-2xl xl:text-3xl 2xl:text-5xl
     font-semibold
-    my-5
+    my-5 lg:my-16
   }
 
   .header-3 {
@@ -34,8 +34,9 @@
   }
   .description {
     @apply
-    text-base xl:text-xl 2xl:text-2xl
+    text-base xl:text-xl
   }
+
   .contactFormInput {
     @apply
     px-4 py-3 

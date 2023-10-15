@@ -1,20 +1,19 @@
 import React from 'react'
-import ContainerModule from '../features/containerModule/ContainerModule'
-import MainHeader from '../ui/MainHeader'
-import ShortDescription from '../ui/ShortDescription'
-import DividerBrand from '../ui/DividerBrand'
+import ContainerModule from '@/components/features/containerModule/ContainerModule'
+import ShortDescription from '@/components/ui/ShortDescription'
+import DividerBrand from '@/components/ui/DividerBrand'
 import { useResize } from '@/hooks/useResize'
-import TwoColumnsGridWithImageLayout from '../layouts/TwoColumnsGridWithImageLayout'
+import TwoColumnsGridWithImageLayout from '@/components/layouts/TwoColumnsGridWithImageLayout'
 
 const HeroModule = () => {
   const { isMobile } = useResize()
 
   return (
-    <ContainerModule className='lg:pb-72' bgToRight>
+    <ContainerModule className='lg:pb-54 2xl:pb-72' bgToRight>
       <TwoColumnsGridWithImageLayout
         textContent={
           <>
-            <MainHeader>Odkryj nasze usługi</MainHeader>
+            <h1 className='header-1'>Odkryj nasze usługi</h1>
             <ShortDescription header='Strony internetowe dla małych firm'>
               Strona internetowa to doskonały sposób na zwiększenie widoczności dla małej firmy. Szczegółowe informacje na temat obecnych klientów - to tylko jedna z wielu korzyści. Dowiedz się kto i dlaczego korzysta z Twoich usług, oraz co jeszcze moze od Ciebie kupić.
             </ShortDescription>

@@ -1,7 +1,7 @@
 import React from 'react'
 import JoinToUsModule from '@/components/module/JoinToUsModule'
 import { HeroServiceDescription } from '@/components/views/HeroServiceDescription'
-import ServicesModule from '@/components/module/ServicesModule'
+import ServicesModule, { ServiceTileContent } from '@/components/module/ServicesModule'
 import { TechnologyStack } from '@/components/features/TechnologyStack'
 import { OurProjects } from '@/components/views/OurProjects/OurProjects'
 
@@ -18,27 +18,32 @@ const page = () => {
     ),
   }
 
-  const servicesTilesContent = [
+  const servicesTilesContent: ServiceTileContent[] = [
     {
-      header: 'Strony internetowe',
+      header: 'Wizytówki',
       desc: 'Tworzymy strony internetowe, które są nie tylko piękne, ale również funkcjonalne i przyjazne dla użytkownika. Nasze strony są zoptymalizowane pod kątem wyszukiwarek, co pozwala na zwiększenie ruchu na stronie i zwiększenie sprzedaży.',
-      srcImage: '/website.png',
+      srcImage: '/wizytowki.svg',
       altImage: 'Strony internetowe',
-      link: '/uslugi/strony-internetowe',
     },
     {
-      header: 'Sklepy internetowe',
+      header: 'Landing page',
+      desc: 'Tworzymy strony internetowe, które są nie tylko piękne, ale również funkcjonalne i przyjazne dla użytkownika. Nasze strony są zoptymalizowane pod kątem wyszukiwarek, co pozwala na zwiększenie ruchu na stronie i zwiększenie sprzedaży.',
+      srcImage: '/landingpages.svg',
+      altImage: 'Strony internetowe',
+      reverse: true,
+    },
+    {
+      header: 'Strony firmowe',
       desc: 'Tworzymy sklepy internetowe, które są nie tylko piękne, ale również funkcjonalne i przyjazne dla użytkownika. Nasze sklepy są zoptymalizowane pod kątem wyszukiwarek, co pozwala na zwiększenie ruchu na stronie i zwiększenie sprzedaży.',
-      srcImage: '/website.png',
+      srcImage: '/strony_firmowe.svg',
       altImage: 'Sklepy internetowe',
-      link: '/uslugi/sklepy-internetowe',
     },
     {
       header: 'Aplikacje internetowe',
       desc: 'Tworzymy aplikacje internetowe, które są nie tylko piękne, ale również funkcjonalne i przyjazne dla użytkownika. Nasze aplikacje są zoptymalizowane pod kątem wyszukiwarek, co pozwala na zwiększenie ruchu na stronie i zwiększenie sprzedaży.',
-      srcImage: '/website.png',
+      srcImage: '/aplikacje_webowe.svg',
       altImage: 'Aplikacje internetowe',
-      link: '/uslugi/aplikacje-internetowe',
+      reverse: true,
     },
   ]
 

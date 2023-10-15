@@ -4,21 +4,21 @@ import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 
 export type ServiceModuleType = {
   className?: string,
-  servicesTilesContent: {
-    header: string
-    desc: string
-    srcImage: string
-    altImage: string
-    className?: string
-    reverse?: boolean
-    extendContent?: boolean
-    link: string
-  }[],
+  servicesTilesContent: ServiceTileContent[],
+}
+
+export type ServiceTileContent = {
+  header: string
+  desc: string
+  srcImage: string
+  altImage: string
+  className?: string
+  reverse?: boolean
+  extendContent?: boolean
+  link?: string
 }
 
 const ServicesModule = ({ className, servicesTilesContent }: ServiceModuleType) => {
-
-
   return (
     <div
       className={tailwindClassMerge(`

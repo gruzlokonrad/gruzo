@@ -1,6 +1,7 @@
 import React from 'react'
 import ContainerModule from '@/components/features/containerModule/ContainerModule'
 import Image from 'next/image'
+import { OurTeam } from './OurTeam'
 
 type HeroServiceDescriptionProps = {
   content: {
@@ -33,6 +34,7 @@ export const HeroServiceDescription = ({ content: { header, text } }: HeroServic
           />
         </div>
       </div>
+      <OurTeam />
     </ContainerModule>
   )
 }

@@ -10,20 +10,19 @@ type TeamPersonCardType = {
 
 export const TeamPersonCard = ({ id, name, position, image }: TeamPersonCardType) => {
   return (
-    <div className='
-      
-      '>
+    <div className=''>
       <div className='
-        w-full sm:w-52 md:w-40 lg:w-52 xl:w-64 2xl:w-80
+        w-full sm:w-52 md:w-32 lg:w-40 xl:w-56 2xl:w-64
+        shadow-[0px_4px_8px] shadow-gray-300 
         aspect-square
-        shadow-[0px_2px_10px] shadow-slate-200 
         mb-2 
-        rounded-lg 
-        border p-1 
+        rounded-3xl
+        p-1 
         mx-auto 
         flex items-center justify-center
+        bg-brand-white
       '>
-        <div className='w-[91%] h-[91%] flex items-center rounded-full relative border'>
+        <div className='w-[91%] h-[91%] flex items-center rounded-full relative border-2 border-gray-500'>
           <Image
             src={image}
             alt={name}
@@ -34,7 +33,7 @@ export const TeamPersonCard = ({ id, name, position, image }: TeamPersonCardType
       </div>
       <div className='
         px-1
-        w-full sm:w-52 md:w-40 lg:w-52 xl:w-64 2xl:w-80
+        w-full sm:w-52 md:w-32 lg:w-40 xl:w-56 2xl:w-64
         mx-auto
       '>
         <div className='description font-medium'>{name}</div>

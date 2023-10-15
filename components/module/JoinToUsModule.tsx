@@ -11,7 +11,7 @@ const JoinToUsModule = () => {
   const { isDesktop } = useResize()
 
   return (
-    <ContainerModule itemsToBottom className={`lg:pb-20`}>
+    <ContainerModule itemsToBottom={false}>
       {isDesktop && <CooperationWithUs />}
       <div className={tailwindClassMerge(`header-2 lg:pl-0 text-left container`)}>Skontaktuj się</div>
       <div className='flex flex-col lg:flex-row'>

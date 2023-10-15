@@ -4,14 +4,13 @@ import TwoColumnsGridWithImageLayout from '../layouts/TwoColumnsGridWithImageLay
 import ContactForm from '../features/ContactForm'
 import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 
-const CallToActionModule = () => {
-  const isLight = true;
+const CallToActionModule = ({ light = false, bgToRight = true, itemsToBottom = true }) => {
   return (
-    <ContainerModule bgToRight itemsToBottom light={isLight}>
+    <ContainerModule bgToRight={bgToRight} itemsToBottom={itemsToBottom} light={light}>
       <TwoColumnsGridWithImageLayout
         textContent={<>
-          <div className={tailwindClassMerge(`header-2 text-2xl lg:text-4xl xl:text-5xl 2xl:text-5xl`)}>Bezpłatna konsultacja</div>
-          <div className={tailwindClassMerge(`description`)}>
+          <div className={tailwindClassMerge(`header-2`)}>Bezpłatna konsultacja</div>
+          <div className={tailwindClassMerge(`header-3`)}>
             Zadaj nam dowolne pytanie. <br />
             <span className='text-brand-red'>Zamów bezpłatną konsultację.</span><br />
             Wystarczy że klikniesz w poniższy przycisk i skontaktujesz się z jednym z naszych specjalistów.
@@ -19,7 +18,7 @@ const CallToActionModule = () => {
         </>}
         imageContent={{ path: '/contact_gruzo_dev.png', alt: 'skontaktuj się z nami gruzo dev' }}
       />
-      <ContactForm light={isLight}/>
+      <ContactForm light={light} />
     </ContainerModule>
   )
 }
