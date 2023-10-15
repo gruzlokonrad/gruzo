@@ -6,9 +6,8 @@ import Header from '@/components/ui/Header'
 const CooperationWithIndustry = () => {
 
   return (
-    <div className='container my-14 lg:my-24'>
+    <div className='container my-14 lg:my-24 '>
       <Header className='lg:mb-16'>Z jakimi branżami pracujemy?</Header>
-      {/* <div className='lg:flex lg:justify-evenly'> */}
       <div className='lg:flex lg:justify-evenly lg:flex-wrap lg:gap-x-4 lg:gap-y-12'>
         <CollaborateTile
           header={'Nauczyciele'}

@@ -15,27 +15,27 @@ export default function Home() {
   const servicesTilesContent = [
     {
       header: 'Strony internetowe',
-      desc: 'Zastosuj nasze strategie marketingowe, aby skutecznie pozyskać nowych klientów i rozwinąć swoją bazę odbiorców.',
+      desc: 'Posiadanie własnej strony internetowej to klucz do sukcesu w dzisiejszym cyfrowym świecie. Zyskaj zaufanie klientów, zwiększ swoją widoczność i otwórz drzwi do nowych możliwości biznesowych. Kliknij teraz, aby poznać szczegóły naszej oferty i rozpocząć swoją przygodę online!',
       srcImage: '/work_gruzo.png',
       altImage: 'strony internetowe gruzo dev',
       className: '',
       reverse: true,
-      extendContent: false,
+      extendContent: true,
       link: '/www'
     },
     {
       header: 'Projekty graficzne',
-      desc: 'Wykorzystaj dane i analizy rynkowe do dostosowania oferty produktów oraz usług, co pomoże Ci zwiększyć skuteczność sprzedaży i osiągnąć lepsze wyniki.',
+      desc: 'Design strony internetowej to kluczowy element, który przyciąga uwagę użytkowników i zwiększa szanse na sukces. Nasz zespół daje Ci gwarancję oryginalnego i atrakcyjnego wyglądu. Zyskaj większą widoczność i zainteresowanie klientów. Sprawdź szczegóły naszej oferty już teraz!',
       srcImage: '/work_gruzo.png',
       altImage: 'strony internetowe gruzo dev',
       className: '',
       reverse: false,
-      // extendContent: true,
+      extendContent: true,
       link: '/design'
     },
     {
       header: 'Optymalizacja SEO',
-      desc: 'Wdrażaj strategie SEO, aktywnie angażuj się w media społecznościowe, oraz dbaj o pozytywne relacje z klientami, aby konsekwentnie budować mocną i wiarygodną obecność online.',
+      desc: 'Wdrażaj strategie SEO, zwiększasz widoczność w wynikach wyszukiwania, przyciągasz więcej klientów i wzmacniasz swoją markę. Kliknij, aby poznać szczegóły oferty i zacząć odnosić większe sukcesy w internecie!',
       srcImage: '/seo_gruzo_dev.png',
       altImage: 'strony internetowe gruzo dev',
       className: '',
@@ -50,8 +50,8 @@ export default function Home() {
       <HeroModule /> 
 
       {/* --- BELOW THE FOLD --- */}
-      <ServicesModule servicesTilesContent={servicesTilesContent} className='lg:h-[1050px]' /> 
-      <CallToActionModule />
+      <ServicesModule servicesTilesContent={servicesTilesContent} className='lg:h-[1700px]' /> 
+      <CallToActionModule light />
       <CooperationWithIndustry />
       <Benefits />
       <Recommendations />

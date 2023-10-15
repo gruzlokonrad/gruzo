@@ -62,7 +62,7 @@ const MenuMobile = () => {
     >
       <div className='flex h-full max-w-lg mx-auto font-medium justify-center'>
         {menuItems.map(({ mobileName, link, icon }, index) => (
-          <MobileButtonItems key={index} path={link} icon={icon}>{mobileName}</MobileButtonItems>
+          <MobileButtonItems key={index} path={link} icon={icon} className='text-base'>{mobileName}</MobileButtonItems>
         ))}
       </div>
     </nav>

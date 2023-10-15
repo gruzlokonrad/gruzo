@@ -5,7 +5,7 @@ import { tailwindClassMerge } from '@/utils/tailwindClassMerge'
 import Button from '../ui/Button'
 import ButtonCTA from '../ui/ButtonCTA'
 
-interface IServicesTile {
+export interface IServicesTile {
   header: string,
   desc: string,
   srcImage: string,
@@ -24,7 +24,7 @@ const ServicesTile = ({ header, desc, srcImage, altImage, reverse = false, class
       mx-[8%] my-10 lg:my-20 md:mx-auto
       p-4 lg:py-10 lg:px-14
       rounded-2xl
-      md:max-w-screen-md lg:max-w-screen-lg
+      md:max-w-screen-md lg:max-w-screen-xl
       lg:flex
       bg-brand-white
       border
@@ -56,11 +56,10 @@ const ServicesTile = ({ header, desc, srcImage, altImage, reverse = false, class
       {/* *** Image WRAPPER *** */}
       <div className='
         relative
-        shadow-md 
         rounded-2xl 
         mt-6 mx-auto lg:my-auto
-        max-w-xs lg:w-[45%] 
-        h-40 lg:h-64
+        lg:w-[45%] 
+        h-40 lg:h-64 xl:h-72
       '>
         <Image src={srcImage} alt={altImage} className='object-contain' fill sizes="100%" />
       </div>

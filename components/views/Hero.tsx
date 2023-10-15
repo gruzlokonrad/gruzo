@@ -9,7 +9,7 @@ const Hero = () => {
     <div className='text_content--maxWidth flex'>
       {/* *** CONTENT *** */}
       <div className=' w-3/5'>
-        <MainHeader className='mb-10'>Odkryj nasze usługi</MainHeader>
+          <h1 className='header-1'>Odkryj nasze usługi</h1>
         <ShortDescription header='Strony internetowe dla małych firm'>
           Strona internetowa to doskonały sposób na zwiększenie widoczności dla małej firmy. Szczegółowe informacje na temat obecnych klientów - to tylko jedna z wielu korzyści. Dowiedz się kto i dlaczego korzysta z Twoich usług, oraz co jeszcze moze od Ciebie kupić.
         </ShortDescription>

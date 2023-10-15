@@ -21,7 +21,8 @@ const CollaborateTile = ({ header, desc, srcImage, altImage, reverse = false, cl
   return (
     <article className={tailwindClassMerge(`
       shadow-2xl 
-      mx-[8%] my-10 lg:my-0 md:mx-auto
+      mx-[8%] md:mx-0
+      my-10 lg:my-0 
       p-4 lg:py-10 lg:px-14
       rounded-2xl
       md:max-w-screen-md lg:max-w-sm

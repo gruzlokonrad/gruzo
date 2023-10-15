@@ -1,6 +1,7 @@
 import React from 'react'
 import JoinToUsModule from '@/components/module/JoinToUsModule'
 import { HeroServiceDescription } from '@/components/views/HeroServiceDescription'
+import CallToActionModule from '@/components/module/CallToActionModule'
 
 const page = () => {
   const serviceDescription = {
@@ -18,7 +19,8 @@ const page = () => {
   return (
     <>
       <HeroServiceDescription content={serviceDescription} />
-      <JoinToUsModule />
+      {/* <JoinToUsModule /> */}
+      <CallToActionModule light bgToRight={false} />
     </>
   )
 }

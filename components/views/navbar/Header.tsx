@@ -33,6 +33,11 @@ const Header = () => {
 
   return (
     <nav className='sticky top-0 border-b border-brand-red bg-white z-20'>
+      {isDesktop &&
+        <section className='p-0 bg-brand-red/25'>
+          <p className='text-center p-1'>Zdobądź oszałamiającą stronę internetową dla swojej firmy już dziś!</p>
+        </section>
+      }
       <div className='container h-20 flex p-2 justify-between items-center'>
         <Brand />
         {isDesktop && <MenuDesktop />}

@@ -75,8 +75,8 @@ const Recommendations = () => {
   ]
 
   return (
-    <div className='container mb-14 lg:px-6 lg:h-72'>
-      <Header>Opinie</Header>
+    <div className='container mb-14 lg:px-6 lg:h-72 2xl:h-96'>
+      <h2 className='header-2'>Opinie</h2>
       <div className='flex flex-col lg:flex-row items-stretch gap-10'>
         {clientsRecommendations.map((recommendation, index) =>
           <RecommendationElement key={index} recommendation={recommendation} />
